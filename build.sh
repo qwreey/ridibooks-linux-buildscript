@@ -48,6 +48,8 @@ npm i --prefix asar-unpack
 sizes=("16x16" "32x32" "48x48" "64x64" "128x128")
 mkdir -p icons/hicolor/$size/apps
 for size in "${sizes[@]}"; do
+	mkdir -p -p icons/hicolor/$size/apps/
+	chmod o+xr,g+xr icons icons/hicolor icons/hicolor/$size icons/hicolor/$size/apps/
 	gm convert icon.png -resize "$size" "icons/hicolor/$size/apps/${pkgname}.png"
 done
 

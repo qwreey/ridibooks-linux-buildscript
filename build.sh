@@ -30,8 +30,8 @@ ELECTRON_VERSION="$(cat builder/node_modules/electron/package.json | grep "\"ver
 [ -e setup-unpack ] && rm -r setup-unpack
 [ -e app-unpack ] && rm -r app-unpack
 [ -e asar-unpack ] && rm -r asar-unpack
-7z x setup.exe -osetup-unpack
-7z x setup-unpack/\$PLUGINSDIR/app-64.7z -oapp-unpack
+7z x setup.exe -osetup-unpack -bb0
+7z x setup-unpack/\$PLUGINSDIR/app-64.7z -oapp-unpack -bb0
 npm run unpack --prefix builder
 
 # backup private file

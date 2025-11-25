@@ -7,7 +7,7 @@ url="https://ridibooks.com"
 makedepends=(sed 7zip curl grep nodejs npm graphicsmagick)
 source=("build.sh" "prepare.sh" "ridibooks.desktop")
 sha256sums=(
-  "3c31f0bca7855dff672fa2e8bd26013a31b18976ad92310ecf703601e7e9e605"
+  "c19e44e46fae4b9276b67e52cc2ec09356c56fec7d57c7d2c0c271bcbb6f3cbd"
   "f46b85e1d5216455acf709455ba7485bedc78390d2ff250d9106bd926861424c"
   "441fcad5296dca900f3722e97b20a3489624dd57f24e7129c0003ae2ff33a9f7"
 )
@@ -23,7 +23,7 @@ prepare() {
 package() {
   mkdir -p "${pkgdir}/opt" "${pkgdir}/usr/share"
   cp -r $srcdir/release/* "${pkgdir}/opt/${pkgname}"
-  cp -r $srcdir/icon "${pkgdir}/usr/share"
+  cp -r $srcdir/icons "${pkgdir}/usr/share"
   install -dM644 $srcdir/ridibooks.desktop "${pkgdir}/usr/share/applications/ridibooks.desktop"
   chmod o+xr,g+xr $pkgdir/opt $pkgdir/opt/$pkgname $pkgdir/usr $pkgdir/usr/share
 }

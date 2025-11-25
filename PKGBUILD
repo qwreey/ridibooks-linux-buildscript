@@ -5,6 +5,7 @@ pkgdesc="Ridibooks desktop reader"
 pkgrel=1
 url="https://ridibooks.com"
 makedepends=(sed 7zip curl grep nodejs npm)
+source=("build.sh" "prepare.sh")
 
 build() {
   ./build.sh

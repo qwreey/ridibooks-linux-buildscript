@@ -20,6 +20,7 @@ prepare() {
 }
 
 package() {
-  install -Dm755 $srcdir/release/* "${pkgdir}/opt/${pkgname}"
+  mkdir -p "${pkgdir}/opt"
+  cp -r $srcdir/release/* "${pkgdir}/opt/${pkgname}"
 }
 

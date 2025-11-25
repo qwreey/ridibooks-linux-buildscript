@@ -6,4 +6,5 @@ package-backup/
 release/
 setup-unpack/
 setup.exe
+.SRCINFO
 

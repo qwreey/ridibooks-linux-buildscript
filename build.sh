@@ -1,5 +1,9 @@
 #/bin/sh
 
+if [ -z "$pkgname" ]; then
+	pkgname="ridibooks"
+fi
+
 # init builder
 mkdir -p builder
 (cat << EOF
@@ -39,6 +43,13 @@ cp -r asar-unpack/node_modules/@ridi asar-unpack/node_modules/@ridi-app package-
 rm -r asar-unpack/node_modules
 cp -r package-backup asar-unpack/node_modules
 npm i --prefix asar-unpack
+
+# create icons
+sizes=("16x16" "32x32" "48x48" "64x64" "128x128")
+mkdir -p icons/hicolor/$size/apps
+for size in "${sizes[@]}"; do
+	gm convert icon.png -resize "$size" "icons/hicolor/$size/apps/${pkgname}.png"
+done
 
 # build
 ELECTRON_VERSION=$ELECTRON_VERSION npm run package --prefix builder

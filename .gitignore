@@ -9,4 +9,7 @@ setup.exe
 .SRCINFO
 src/
 pkg/
+*.pkg.tar.*
+icon/
+icon.png
 

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=RidiBooks
+Name[ko]=리디북스
+Exec=/opt/ridibooks/Ridibooks
+Keywords[ko]=책;전자책
+Keywords=Book;EBook
+Icon=ridibooks
+

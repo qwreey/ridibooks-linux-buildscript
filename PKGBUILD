@@ -4,7 +4,7 @@ arch=(x86_64)
 pkgdesc="Ridibooks desktop reader"
 pkgrel=1
 url="https://ridibooks.com"
-makedepends=(sed 7zip curl grep nodejs npm)
+makedepends=(sed 7zip curl grep nodejs npm graphicsmagick)
 source=("build.sh" "prepare.sh" "ridibooks.desktop")
 sha256sums=(
   "5a57fcd5e2994ca3b89bfe4b43a5ca8ec393e7fcf3a26fa559f46d18a7f53437"

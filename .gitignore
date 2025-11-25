@@ -1,0 +1,9 @@
+app-unpack/
+asar-unpack/
+builder/
+latest.yml/
+package-backup/
+release/
+setup-unpack/
+setup.exe
+

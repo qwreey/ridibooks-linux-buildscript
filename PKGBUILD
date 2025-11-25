@@ -4,7 +4,7 @@ arch=(x86_64)
 pkgdesc="Ridibooks desktop reader"
 pkgrel=1
 url="https://ridibooks.com"
-makedepends=(sed 7zip curl grep node npm)
+makedepends=(sed 7zip curl grep nodejs npm)
 
 build() {
   ./build.sh

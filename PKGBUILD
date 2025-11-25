@@ -17,14 +17,14 @@ build() {
 }
 
 prepare() {
-  ./prepare.sh
+  pkgver="$pkgver" pkgname="$pkgname" ./prepare.sh
 }
 
 package() {
   mkdir -p "${pkgdir}/opt" "${pkgdir}/usr/share"
   cp -r $srcdir/release/* "${pkgdir}/opt/${pkgname}"
   cp -r $srcdir/icons "${pkgdir}/usr/share"
-  install -dM644 $srcdir/ridibooks.desktop "${pkgdir}/usr/share/applications/ridibooks.desktop"
+  install -Dm644 $srcdir/ridibooks.desktop "${pkgdir}/usr/share/applications/ridibooks.desktop"
   chmod o+xr,g+xr $pkgdir/opt $pkgdir/opt/$pkgname $pkgdir/usr $pkgdir/usr/share
 }
 

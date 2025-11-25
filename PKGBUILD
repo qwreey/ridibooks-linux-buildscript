@@ -7,8 +7,8 @@ url="https://ridibooks.com"
 makedepends=(sed 7zip curl grep nodejs npm)
 source=("build.sh" "prepare.sh")
 sha256sums=(
-  "d28a36747f77364fd76c0b66f968e13dc76efbf986f0df627259ca2cf7eec440"
-  "500cd58c612e4fa00a9ef6af8e870350324f768d7bd259a5bd22f2ca7c6eef6b"
+  "0c429e17d75fd048332ef455793be8a9ef2f7fe2f25ee2edd5eb39924ea95af7"
+  "e8ca083d8fc36dc467e950c5e04c106e35b22711c525a2258a2c3b2a5ec422a8"
 )
 
 build() {

@@ -6,8 +6,9 @@ function getOption() {
 if [ -e latest.yml ]; then
 	VERSION_CURR="$(getOption version)"
 fi
-
-curl https://viewer-ota.ridicdn.net/pc_electron/latest.yml -o latest.yml
+if [ "$pkgver" != "$VERSION_CURR" ]; then
+	curl https://viewer-ota.ridicdn.net/pc_electron/latest.yml -o latest.yml
+fi
 
 # download icon
 [ ! -e icon.png ] && curl "https://static.ridicdn.net/books-backend/p/39a20f/books/dist/favicon/apple-touch-icon-180x180.png?20220405" -o icon.png

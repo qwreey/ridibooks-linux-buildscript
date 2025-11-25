@@ -7,4 +7,5 @@ release/
 setup-unpack/
 setup.exe
 .SRCINFO
+src/
 
